@@ -1,5 +1,5 @@
 exp:
-  project_name: "rf-emf-forecasting/RF-EMF"
+  project_name: "aryan/emforecaster"
   model_id: "DLinear"
   learning_type: "sl"
   seed_list: [69421, 69422, 69423, 69424, 69425]

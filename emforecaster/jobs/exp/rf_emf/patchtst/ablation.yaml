@@ -11,7 +11,7 @@ ablations:
   sl.num_enc_layers: [2]
 
   # Conformal prediction
-  exp.project_name: ["rf-emf-conf/main"]
+  exp.project_name: ["aryan/emforecaster"]
   data.dataset: ["rf_emf_ptv2"]
   # conf.conf: [True]
   # conf.alpha: [0.1, 0.05, 0.01]

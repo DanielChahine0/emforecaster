@@ -1,5 +1,5 @@
 neptune:
-  project: "rf-emf-conf/main"
+  project: "aryan/emforecaster"
 
 single_filter:
   "parameters/exp/model_id": "PatchTST"

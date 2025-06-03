@@ -1,13 +1,18 @@
 neptune:
-  project: "rf-emf-conf/main"
+  # project: "rf-emf-conf/main
+  project: "aryan/emforecaster"
 
 single_filter:
   "parameters/exp/model_id": "EMForecaster"
-  "parameters/exp/patch_model_id": "TSMixer"
+  # "parameters/exp/patch_model_id": "TSMixer" #commented by aryan
+  "parameters/exp/patch_model_id": "DLinear"
   "parameters/data/dataset": "rf_emf"
-  "parameters/data/seq_len": 336
-  "parameters/data/pred_len": 192
-  "parameters/conf/alpha": 0.01
+  # "parameters/data/seq_len": 336 #aryan comment
+  "parameters/data/seq_len": 20 
+  # "parameters/data/pred_len": 192 #this pred_len change this for different results [192, 336, 512] #comment by aryan 
+  "parameters/data/pred_len": 20 #this pred_len change this for different results [192, 336, 512] 
+  # "parameters/conf/alpha": 0.01 #comment by aryan
+  "parameters/conf/alpha": 0.1
 
 # multi_filter:
 #   "parameters/exp/model_id": ["RF_EMF_CNN"]
@@ -22,10 +27,16 @@ single_filter:
 metrics:
   - "sl_test/loss"
   - "sl_test/mae"
-  - "sl_test/jc"
-  - "sl_test/ic"
-  - "sl_test/interval_width_mean"
-  - "sl_test/interval_width_std"
+
+  #commented by aryan below
+  # - "sl_test/jc"
+  # - "sl_test/ic"
+  # - "sl_test/interval_width_mean"
+  # - "sl_test/interval_width_std"
+
+#mse is the sl_train/loss is the mse on the training data over epochs 
+#sl_val/loss is the mse on the validation data over epochs 
+#sl_test/loss is the final value and this is how ranking is done based on the test set 
 
 deciding_metric: "sl_test/loss"
 ranking: "min"
@@ -52,3 +63,39 @@ params:
   - "parameters/conf/alpha"
 
 seeds: [69421, 69422, 69423, 69424, 69425]
+
+
+# aryan
+# neptune:
+#   project: "aryan/emforecaster"
+
+# single_filter: {}
+
+# params:
+#   - "parameters/exp/model_id"
+
+# metrics:
+#   - "sl_val/mae"
+
+
+# deciding_metric: "sl_val/mae"
+# ranking: "min"
+# seeds: [69421, 69422, 69423, 69424, 69425]
+
+# mse error 
+# aryan
+# neptune:
+#   project: "aryan/emforecaster"
+
+# single_filter: {}
+
+# params:
+#   - "parameters/exp/model_id"
+
+# metrics:
+#   - "sl_test/loss"
+
+
+# deciding_metric: "sl_test/loss"
+# ranking: "max"
+# seeds: [69421, 69422, 69423, 69424, 69425]

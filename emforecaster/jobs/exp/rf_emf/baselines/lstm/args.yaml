@@ -1,5 +1,5 @@
 exp:
-  project_name: "rf-emf-forecasting/RF-EMF"
+  project_name: "aryan/emforecaster"
   model_id: "RF_EMF_LSTM"
   learning_type: "sl"
   id: "rf_emf"

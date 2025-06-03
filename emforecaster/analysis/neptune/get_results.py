@@ -52,7 +52,12 @@ def get_query(filter):
         else:
             raise ValueError(f"Unsupported type for key '{key}': {type(value)}")
 
-    return " AND ".join(query_parts) + " AND sys/failed:bool = False"
+    # return " AND ".join(query_parts) + " AND sys/failed:bool = False"
+    if query_parts:
+        return " AND ".join(query_parts) + " AND sys/failed:bool = False"
+    else:
+        return "sys/failed:bool = False"
+
 
 
 def get_runs_table(project, query, columns, metrics, console):
@@ -205,7 +210,12 @@ def main(dataset, model_id):
     console = Console()
 
     # Arguments
+    """ commented by aryan
     yaml_path = os.path.join("ablations", dataset, model_id + ".yaml")
+    """
+    #aryan code
+    yaml_path = os.path.join(os.path.dirname(__file__), "ablations", model_id + ".yaml")
+
     args = load_yaml(yaml_path)
 
     # Load project

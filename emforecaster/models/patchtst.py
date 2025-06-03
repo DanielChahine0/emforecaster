@@ -82,7 +82,8 @@ class PatchTST(nn.Module):
             num_channels=self.num_channels,
             eps=self.eps_revin,
             affine=self.revin_affine,
-            target_channels=self.target_channels,
+            # this was commented out by aryan
+            # target_channels=self.target_channels,
         )
 
     def forward(self, x, y=None, ch_ids=None):

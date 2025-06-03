@@ -1,7 +1,8 @@
 exp:
-  project_name: "rf-emf-forecasting/RF-EMF"
+  project_name: "aryan/emforecaster"
   model_id: "EMForecaster"
-  patch_model_id: "DLinear"
+  # patch_model_id: "DLinear" #commented by aryan
+  patch_model_id: "TSMixer"
   backbone_id: "DLinear"
   learning_type: "sl"
   seed_list: [69421, 69422, 69423, 69424, 69425]
@@ -9,7 +10,7 @@ exp:
   mae: True
   rank_verbose: False
   task: "forecasting"
-  neptune: False
+  neptune: True
   gpu_id: 0
 
 data:

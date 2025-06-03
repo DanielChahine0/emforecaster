@@ -1,0 +1,77 @@
+[33mcommit 8c92ddbae0a5a37e7c87823f7e0de38d716be7d7[m[33m ([m[1;36mHEAD -> [m[1;32mmain[m[33m, [m[1;31morigin/main[m[33m, [m[1;31morigin/HEAD[m[33m)[m
+Author: Xavier Mootoo <xmootoo@gmail.com>
+Date:   Mon May 5 13:33:31 2025 -0400
+
+    Fixed readme
+
+[33mcommit d56773733bed350f3a4cedea6afe6cf3ce3876dd[m
+Author: Xavier Mootoo <xmootoo@gmail.com>
+Date:   Mon Mar 31 19:01:43 2025 -0400
+
+    Updated test script and redundancies in pipeline
+
+[33mcommit 6a7593a2458ac17315e553087c77da6f364a48bf[m
+Author: Xavier Mootoo <xmootoo@gmail.com>
+Date:   Mon Mar 31 19:01:22 2025 -0400
+
+    Changed to -np.inf (old version deprecated)
+
+[33mcommit 01981262546467fba6c7abb7e842da4fcb9e760a[m
+Author: Xavier Mootoo <xmootoo@gmail.com>
+Date:   Mon Mar 31 19:01:08 2025 -0400
+
+    Removed calibration script
+
+[33mcommit d8e902faa333e5f437e8b6f4ae2f13cd422f4d62[m
+Author: Xavier Mootoo <xmootoo@gmail.com>
+Date:   Mon Mar 31 19:01:02 2025 -0400
+
+    Removed DDP
+
+[33mcommit 4108b7f0caaf54d5ce62d190571e29e6db7c4e38[m
+Author: Xavier Mootoo <xmootoo@gmail.com>
+Date:   Mon Mar 31 19:00:50 2025 -0400
+
+    Remove old setup.py and requirements.txt
+
+[33mcommit 456d87be1cac0d324457d563db34c3e3001d375d[m
+Author: Xavier Mootoo <xmootoo@gmail.com>
+Date:   Mon Mar 31 19:00:40 2025 -0400
+
+    Added pyproject dependencies
+
+[33mcommit 9c337f81eb9ab80bcc8f83770601761f1f211116[m
+Author: Xavier Mootoo <xmootoo@gmail.com>
+Date:   Mon Mar 31 19:00:29 2025 -0400
+
+    Added poetry.lock
+
+[33mcommit 8b6df1a582b6bd989a019c819f681854065ea57d[m
+Author: Xavier Mootoo <xmootoo@gmail.com>
+Date:   Wed Mar 26 14:22:16 2025 -0400
+
+    Updated model name
+
+[33mcommit 861eecbfb7b7a53746212d3f20ccdc65272aa86f[m
+Author: Xavier Mootoo <xmootoo@gmail.com>
+Date:   Wed Mar 26 14:21:55 2025 -0400
+
+    Updated model name
+
+[33mcommit a5a483dc9dff6886deddd85d49f027df28c5ff2e[m
+Author: Xavier Mootoo <xmootoo@gmail.com>
+Date:   Wed Mar 26 14:19:29 2025 -0400
+
+    Added README
+
+[33mcommit 88c32c6de4f3767174dfc5494169c94c57493375[m
+Author: Xavier Mootoo <xmootoo@gmail.com>
+Date:   Wed Mar 26 14:06:12 2025 -0400
+
+    Added dependencies
+
+[33mcommit f6fb9dbc8f24a4d87c87fcf47d62818a54112dd9[m
+Author: Xavier Mootoo <xmootoo@gmail.com>
+Date:   Wed Mar 26 14:00:11 2025 -0400
+
+    Initial commit

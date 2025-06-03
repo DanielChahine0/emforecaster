@@ -9,9 +9,17 @@ import pywt
 import os
 from datetime import datetime
 
+
+# # aryan
+# import matplotlib as mpl
+# mpl.rcParams['text.usetex'] = False
+
+
+
 plt.rcParams.update(
     {
-        "text.usetex": True,
+        # "text.usetex": True,
+        "text.usetex": False, #aryan earlier was true this is for latex rendering i do not have latex on my device so turned off 
         "font.family": "serif",
         "font.serif": ["Computer Modern Roman"],
         "axes.titlesize": 20,

@@ -97,7 +97,16 @@ if __name__ == "__main__":
     parser = argparse.ArgumentParser(description="Run experiment")
     parser.add_argument("job_name", type=str, default="test", help="Name of the job")
     parser.add_argument("--venv_test", action="store_true", help="Flag for venv test")
-    parser.add_argument("--ablation", type=str, default=None, help="Ablation study configuration")
+    # parser.add_argument("--ablation", type=str, default=None, help="Ablation study configuration") #commented by aryan
+    # addition below 
+    import yaml
+
+    def load_ablation_yaml(path):
+        with open(path, "r") as f:
+            return yaml.safe_load(f)
+
+    parser.add_argument("--ablation", type=load_ablation_yaml, default=None, help="Path to ablation YAML config")
+    #addition end
     parser.add_argument("--ablation_id", type=int, default=1, help="Ablation study configuration")
 
     args = parser.parse_args()
@@ -106,12 +115,17 @@ if __name__ == "__main__":
         print("Running in venv test mode")
         # Add any venv test specific code here
     else:
-        if args.ablation is not None:
-            try:
-                ablation = json.loads(args.ablation)
-                main(job_name=args.job_name, ablation=ablation, ablation_id=args.ablation_id)
-            except json.JSONDecodeError:
-                print("Error: Invalid JSON string for ablation configuration")
-                sys.exit(1)
-        else:
-            main(args.job_name)
+        # below whole is commented by aryan
+        # if args.ablation is not None:
+        #     try:
+        #         ablation = json.loads(args.ablation)
+        #         main(job_name=args.job_name, ablation=ablation, ablation_id=args.ablation_id)
+        #     except json.JSONDecodeError:
+        #         print("Error: Invalid JSON string for ablation configuration")
+        #         sys.exit(1)
+        # else:
+        #     main(args.job_name)
+
+        # below line is added 
+        main(job_name=args.job_name, ablation=args.ablation, ablation_id=args.ablation_id)
+

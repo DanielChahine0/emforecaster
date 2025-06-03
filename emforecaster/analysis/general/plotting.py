@@ -13,15 +13,16 @@ from datetime import datetime
 
 def set_theme(theme: Literal["light", "dark"] = "light"):
     """Set the plotting theme parameters."""
-    base_params = {
-        "text.usetex": True,
-        "font.family": "serif",
+    base_params = { 
+        # "text.usetex": True, 
+        "text.usetex": False,    
+        "font.family": "serif", 
         "font.serif": ["Computer Modern Roman"],
-        "axes.titlesize": 20,
+        "axes.titlesize": 20, 
         "axes.labelsize": 18,  # Increased from 16
-        "xtick.labelsize": 18,
-        "ytick.labelsize": 16,
-        "axes.spines.top": True,
+        "xtick.labelsize": 18, 
+        "ytick.labelsize": 16,  
+        "axes.spines.top": True, 
         "axes.spines.right": True,
         "axes.linewidth": 1.5,
         "axes.grid": False,
@@ -102,6 +103,11 @@ def plot_correlation_heatmap(
             series2 = data_list[j].astype(float)
 
             # Calculate correlation
+            #these are the extra lines of code added (aryan) these are added because corr = np.corrcoef... gives an error because both the series are not of same length thats why 
+            min_len = min(len(series1), len(series2))
+            series1 = series1[:min_len]
+            series2 = series2[:min_len]
+            #extra ends here 
             corr = np.corrcoef(series1, series2)[0, 1]
             corr_matrix[i, j] = corr
 

@@ -9,7 +9,7 @@ ablations:
   sl.weight_decay: [0.0001]
 
   # Conformal prediction
-  exp.project_name: ["rf-emf-conf/main"]
+  exp.project_name: ["aryan/emforecaster"]
   data.dataset: ["rf_emf_ptv2"]
   # conf.conf: [True]
   # conf.alpha: [0.05, 0.01]
