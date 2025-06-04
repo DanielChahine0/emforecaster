@@ -6,7 +6,7 @@ exp:
   seed: 69421
   mae: True
   neptune: True
-  gpu_id: 2
+  gpu_id: 0
 
 data:
   seq_load: True
