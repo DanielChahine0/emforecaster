@@ -10,5 +10,5 @@ ablations:
   data.dataset:
     ["rf_emf_det", "rf_emf_ptv", "rf_emf_ptv2", "rf_emf_tur", "rf_emf"]
   conf.conf: [True]
-  conf.alpha: [0.1, 0.05, 0.01]
+  conf.alpha: [0.01]
   conf.corrected: [True]

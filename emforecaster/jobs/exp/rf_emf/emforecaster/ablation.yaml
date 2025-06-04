@@ -1,19 +1,16 @@
 job_name: "aryan/emforecaster"
 
-#now i have to add global. to all coz of the main.py global config thing 
-
+#now i have to add global. to all coz of the main.py global config thing
 
 ablations:
   global.exp.project_name: ["aryan/emforecaster"]
-  # data.dataset: ["rf_emf"]
-  global.data.dataset: ["rf_emf"]
-  # exp.patch_model_id: ["TSMixer"]
+  global.data.dataset:
+    ["rf_emf_det", "rf_emf_ptv", "rf_emf_ptv2", "rf_emf_tur", "rf_emf"]
   global.exp.patch_model_id: ["TSMixer"]
   global.data.num_channels: [1]
   global.tsmixer.dropout: [0.3]
-  # data.seq_len: [336]
   global.data.seq_len: [336]
-  global.data.pred_len: [192, 336, 512]
+  global.data.pred_len: [96, 192, 336, 512]
   global.sl.scheduler: ["onecycle"]
   global.sl.lr: [0.0001]
   global.sl.patch_norm: ["none"]
@@ -24,7 +21,7 @@ ablations:
   global.data.patch_dim: [8]
   global.data.patch_stride: [-1]
   global.sl.patch_embed_dim: [256, 512]
-  global.sl.pos_enc: ["none"] 
+  global.sl.pos_enc: ["none"]
   global.dlinear.final_moving_avg: [25]
   global.sl.independent_patching: [False]
   global.sl.batch_size: [512]
@@ -32,5 +29,5 @@ ablations:
 
   # Conformal prediction
   global.conf.conf: [True]
-  global.conf.alpha: [0.05, 0.01]
+  global.conf.alpha: [0.01]
   global.conf.corrected: [True]
