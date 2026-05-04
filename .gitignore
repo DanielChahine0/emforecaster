@@ -2,6 +2,17 @@ __pycache__/
 .pytest_cache/
 emforecaster.egg-info/
 .eggs/
+*.pyc
+
+# Virtual environments
+venv/
+.venv/
+env/
+
+# Editor/IDE
+.vscode/
+.idea/
+.DS_Store
 emforecaster/hpc/logs/
 data/
 checkpoint/
