@@ -10,27 +10,34 @@ EMForecaster is a novel deep learning architecture specialized for time series f
 
 ## Installation
 ### Dependencies
-- Python $\geq$ 3.10
+- Python $\geq$ 3.10, $<$ 3.14 (numba does not yet support 3.14)
 
 ### Using conda
 ```bash
 # Create and activate conda environment
-conda create -n emforecaster python=3.10
+conda create -n emforecaster python=3.12
 conda activate emforecaster
 
-# Install requirements
+# Install pinned dependencies, then the package itself
+pip install -r requirements.txt
 pip install -e .
 ```
 
 ### Using pip
 ```bash
 # Create and activate virtual environment
-python -m venv venv
+python3.12 -m venv venv
 source venv/bin/activate  # On Windows: venv\Scripts\activate
 
-# Install requirements
+# Install pinned dependencies, then the package itself
+pip install -r requirements.txt
 pip install -e .
 ```
+
+`requirements.txt` contains the exact pinned versions of every dependency
+(reproducible setup). `pip install -e .` then registers the local
+`emforecaster` package in editable mode so `import emforecaster` works
+and your code edits take effect without reinstalling.
 
 ## Data
 Data is proprietary and provided by primarily by Luca Chiaraviglio, please contact him for access.

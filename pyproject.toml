@@ -5,23 +5,50 @@ description = "EMForecaster official repository."
 authors = ["Xavier Mootoo"]
 license = "MIT"
 readme = "README.md"
-repository = "https://github.com/xmootoo/emforecaster" # Update with actual repo URL if available
-keywords = ["forecasting", "machine learning"]         # Add relevant keywords
+repository = "https://github.com/xmootoo/emforecaster"
+keywords = ["forecasting", "machine learning"]
 
 [tool.poetry.dependencies]
-python = ">=3.10,<3.15" # Numba 0.61.x does not support Python 3.14
-torch = "^2.6.0"       # Already installed
-neptune = "^1.13.0"    # Will now be compatible
-scikit-learn = "^1.6.1"
-pydantic = "^2.11.1"
-rich = "^14.0.0"
-tslearn = "^0.6.3"
-mambapy = "^1.2.0"
-torchmetrics = "^1.7.0"
-python-dotenv = "^1.1.0"
+# Numba 0.61.x does not support Python 3.14, so cap the upper bound.
+python = ">=3.10,<3.14"
+
+# Core ML / numerical
+torch = "2.11.0"
+torchvision = "0.26.0"
+torchmetrics = "1.9.0"
+numpy = "2.2.6"
+scipy = "1.16.3"
+scikit-learn = "1.6.1"
+pandas = "3.0.2"
+numba = "0.61.2"
+llvmlite = "0.44.0"
+
+# Models / time series
+mambapy = "1.2.0"
+tslearn = "0.6.4"
+statsmodels = "0.14.6"
+pywavelets = "1.9.0"
+ptwt = "1.0.1"
+
+# Plotting
+matplotlib = "3.10.9"
+seaborn = "0.13.2"
+
+# Config / validation
+pydantic = "2.13.3"
+pyyaml = "6.0.3"
+python-dotenv = "1.2.2"
+
+# Experiment tracking
+neptune = "1.14.0.post2"
+
+# Cluster job submission
+submitit = "1.5.4"
+
+# Console
+rich = "14.3.4"
 
 [tool.poetry.group.dev.dependencies]
-# Development dependencies
 pytest = "^7.0.0"
 black = "^23.0.0"
 isort = "^5.12.0"
